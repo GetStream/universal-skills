@@ -7,8 +7,6 @@ paths:
 
 # Go
 
-These rules are the choices we make. General Go style is not repeated here. Where a project's own AGENTS.md or skills say something more specific, follow those.
-
 ## Services/ Infra
 
 Services we like to use:
@@ -29,6 +27,7 @@ Services we like to use:
 - Use OpenAPI for proper client side SDK generation
 - koanf for yaml configs
 - otel for monitoring
+- Asynq for queuing if you need it
 
 ## Rules
 
@@ -54,9 +53,9 @@ Services we like to use:
 
 - Redis client side caching is great for configs etc that don't change often.
 - Check how many Redis and Postgres queries a given API call does. Watch for N+1 queries.
-- Reducing queries or pipelining is often effective.
+- Reducing queries or pipelining redis is often effective.
 - sync.Pool can be important for hot allocations, see where you can use it.
 
 ## Tests
 
-Before adding a test or a test suite, read [Go testing](testing/index.md). It links to the guide for each kind of test: HTTP controllers, the database store and external (AI) providers.
+Before adding a test or a test suite, read [Go testing](testing/index.md). It links to the guide for each kind of test: HTTP controllers, the database store, external providers and fixtures.
