@@ -19,5 +19,4 @@ Read the file for what you are testing:
 
 - [controllers.md](controllers.md): HTTP endpoints, run against the whole router with a real database. Who may call an endpoint, whose a resource is, fixtures, parallel suites.
 - [store.md](store.md): models and queries, run against a real Postgres.
-- [providers.md](providers.md): code that calls an outside service (payments, email, storage). One shared suite per interface, test file layout, integration tests.
 - [fixtures.md](fixtures.md): writing and sharing the input tests read, including canned responses in `testdata/`.

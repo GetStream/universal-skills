@@ -58,4 +58,4 @@ Services we like to use:
 
 ## Tests
 
-Before adding a test or a test suite, read [Go testing](testing/index.md). It links to the guide for each kind of test: HTTP controllers, the database store, external providers and fixtures.
+Before adding a test or a test suite, read [Go testing](testing/index.md). It links to the guide for each kind of test: HTTP controllers, the database store and fixtures.
