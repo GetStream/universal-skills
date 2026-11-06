@@ -26,6 +26,7 @@ Design -> npx skills add https://github.com/GetStream/universal-skills/ --skill 
 React -> npx skills add https://github.com/GetStream/universal-skills/ --skill react
 Backend -> npx skills add https://github.com/GetStream/universal-skills/ --skill go
 Infra -> npx skills add https://github.com/GetStream/universal-skills/ --skill infra
+Demo videos -> npx skills add https://github.com/GetStream/universal-skills/ --skill present
 
 ## Design
 
