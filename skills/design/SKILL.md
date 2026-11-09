@@ -7,7 +7,9 @@ description: How frontend design work is done in this repo - art direction, then
 
 ## Art direction
 
-Use the `design-taste-frontend` skill for art direction and the house style. Read it before you design or restyle a page.
+
+Use this skill npx skills add this: npx skills add https://github.com/anthropics/skills --skill frontend-design
+For art direction and the house style. Read it before you design or restyle a page.
 
 ## Design loop
 
