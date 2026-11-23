@@ -1,6 +1,6 @@
 ---
 name: go
-description: How Go is written in our projects - stack, errors, logging, spans, context, goroutines, comments, performance and tests. Read before writing or changing Go code or Go tests.
+description: How Go is written in our projects - stack, errors (errors.md), state (state.md), logging, spans, context, goroutines, comments, performance and tests. Read before writing or changing Go code or Go tests.
 paths:
   - "**/*.go"
 ---
@@ -32,8 +32,8 @@ Services we like to use:
 ## Rules
 
 - Check the `go` directive of the nearest `go.mod` before you use a newer feature. In a repo with several modules, each can pin a different version.
-- Wrap an error with `%w`. Start the message with the package name and say what was being done, with no "failed to": `oauth2cc: token: %w`. Return the error as is when it already says enough. If the project attaches stack traces, do it once, where an error enters the code base, then pass it up unchanged.
-- Handle an error once. Never log an error and also return it.
+- Errors: read [errors.md](errors.md) before you make, wrap, log or answer one. In short: wrap with `%w` and the package and operation (`oauth2cc: token: %w`), handle it once, and never send its text to a caller.
+- State: read [state.md](state.md) before you add a table, a column, a query or a Redis key.
 - Log with `log/slog`. Put the data in key-value fields, not in the message: `logger.Warn("could not store the subscription", "subscription", sub.ID, "error", err)`.
 - An HTTP handler returns its error and does not log it. One request-logging middleware logs it, with its stack, and a 5xx at error level.
 - Name a span in lowercase dotted words, the area then the step: `config.read`, `quota.allow`, `checkout.charge`.
